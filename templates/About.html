@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="{{ url_for('static', filename=theme) }}" rel="stylesheet" id="theme">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hello</title>
+</head>
+    <body>
+        {% include "navPanel.html" %}
+        <center><h1>О Нас</h1></center>
+        <div class="container">
+            <div class="container-fluid my-ONas">
+                <div class="row row-cols-1 row-cols-lg-2 row-cols-md-1">
+                    <div class="col1">
+                        <p>Мы - молодая, но амбициозная команда делающая качественные и красивые ювилирные изделия</p>
+                        <center><img src="{{ url_for('static', filename='/img/8.png') }}" alt="" width="350" height="200" class="p-3 align-text-center"></center>
+                    </div>
+                    <div class="col2"><center>
+                        <img src="{{ url_for('static', filename='/img/9.png') }}" alt="" width="350" height="200" class="p-3 align-text-center">
+                        <p>Мы работаем на качественном оборудовании и вкладываем душу в каждое своё изделие</p>
+                    </center></div>
+                </div>
+                <div class="col3"><center>
+                    <p>Контактный телефон:+7-958-936-66-54</p>
+                </center></div>
+            </div>
+        </div>
+        <div class="karta">
+        <center>
+        <h3>Мы находимся вот здесь</h3>
+        <script type="text/javascript" charset="utf-8"
+                async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aff3f610a52492121ac92394dbb5b58bb14ab86f6024d1321b0e6297c759ef5fe&amp;width=873&amp;height=373&amp;lang=ru_RU&amp;scroll=true">
+        </script>
+            </center>
+        </div>
+        {% include "chat.html" %}
+        {% include "footer.html" %}
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/script3.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
+  </body>
+</html>

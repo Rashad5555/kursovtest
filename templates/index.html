@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="{{ url_for('static', filename=theme) }}" rel="stylesheet" id="theme">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hello</title>
+</head>
+<body>
+{% include "navPanel.html" %}
+
+<div id="carousel-ex" class="carousel slide carousel-fade pt-4" data-ride="carousel">
+     <ol class="carousel-indicators" >
+         <li  class="active" data-target="#carousel-ex" data-slide-to="0" style="background-color: black"></li>
+         <li data-target="#carousel-ex" data-slide-to="1" style="background-color: black"></li>
+         <li data-target="#carousel-ex" data-slide-to="2" style="background-color: black"></li>
+     </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <div class="view" style="background-repeat: no-repeat; background-size: cover;">
+                <a class="main_btn mt-40" href="{{ url_for('Catalog')  }}">
+                  <img src="{{ url_for('static', filename='/img/Group.png') }}"class="d-block w-100" alt="...">
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="view" style="background-repeat: no-repeat; background-size: cover;">
+                <a class="main_btn mt-40" href="{{ url_for('Catalog')  }}">
+                  <img src="{{ url_for('static', filename='/img/Group1.png') }}"class="d-block w-100" alt="...">
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="view" style="background-repeat: no-repeat; background-size: cover;">
+                <a class="main_btn mt-40" href="{{ url_for('Catalog')  }}">
+                  <img src="{{ url_for('static', filename='/img/Group2.png') }}"class="d-block w-100" alt="...">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<center><h4>Предоставляем вашему вниманию видеоматериал для ознакомления<br></h4></center>
+<div class="container my-video">
+<div class="row row-cols-3">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Vre5T0dZ_6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/MWzx2E8r7PM" title="Как делают золотые кольца?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/k4j48I6EX4o" title="Как делают золотые кольца. Производство золотых колец" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+
+
+{% include "chat.html" %}
+
+<img onclick="topFunction();" id="myBtn" title="Go to top"  class="imgToTop btn topButton rounded-circle" src="{{ url_for('static', filename='/img/up.png') }}" alt="">
+
+{% include "footer.html" %}
+
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+</body>
+</html>
+
+
+
+
+

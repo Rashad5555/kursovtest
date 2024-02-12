@@ -1,0 +1,102 @@
+.shrift{
+    margin-top: 0px;
+}
+
+iframe{
+    margin-top: 31px;
+
+}
+
+.my-photo{
+    margin-top: 51px;
+}
+
+.body{
+    transition: 1s;
+}
+button7{
+    padding: 8px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+    margin-top: 1%;
+    outline: none;
+}
+
+.topButton {
+	width: 90px;
+	height: 90px;
+	position: fixed;
+	bottom: 140px;
+	right: 40px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: white;
+	color: white;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.chatButton {
+	width: 70px;
+	height: 70px;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: white;
+	color: white;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+
+.roundForCarousel{
+	border-radius: 100px;
+}
+
+/* Important part */
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    height: 50vh;
+    overflow-y: auto;
+}
+
+.theirMessage{
+	border-radius: 2em;
+}
+.pImageHover:hover{
+	padding-top: 2px;
+	padding-bottom: 10px;
+
+}
+.reviewImage{
+	height: 200px;
+}
+
+#neubar {
+      background: #fae8d2;
+      box-shadow: 4px 6px 12px rgba(0,0,0,0.4)
+    }
+
+    #neubar .nav-item {
+      margin : auto 4px;
+    }
+    #neubar a {
+
+      padding-left:12px;
+      padding-right:12px;
+    }
+    a.navbar-brand {
+      color: #454545
+    }
+

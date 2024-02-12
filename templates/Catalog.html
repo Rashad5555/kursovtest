@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="{{ url_for('static', filename=theme) }}" rel="stylesheet" id="theme">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hello</title>
+</head>
+<body>
+{% include "navPanel.html" %}
+
+   		<section class="gallery">
+			<div class="gallery-items">
+   				<div class="container">
+					<div class="row row-cols-1 row-cols-lg-2 row-cols-md-2">
+								{% for item in items %}
+									<div class="item">
+										<a href="{{ url_for('rings',id=item.id)  }}">
+										<center>
+											<img src="{{ url_for('static', filename= item.path_photos + '/1.png') }}" alt="gallery" width="250" height="200" class="p-3 align-text-center">
+											<p>{{item.name}}</p>
+										</center>
+										</a>
+
+										<div class = "modals">
+											<div class = "d-flex align-self-center">
+												<a class="btn btn-primary mx-md-auto mx-lg-auto" data-bs-toggle="modal" href="#Modal{{item.id}}" role="button">Предпосмотр</a>
+											</div>
+										</div>
+
+									</div>
+								{% endfor %}
+							</div>
+					</div>
+								<center>
+								{% for item in items %}
+								 <!-- Modal -->
+								  <div class="modal fade" id="Modal{{item.id}}" role="dialog">
+									<div class="modal-dialog modal-lg">
+									  <!-- Modal content-->
+									  <div class="modal-content"style="background-color:white">
+										<div class="modal-header">
+										  <h1 class="modal-title">{{item.name}}</h1>
+										</div>
+										<div class="modal-body">
+
+										 <h2>{{item.name}}</h2>
+											 <div class="col2">
+											<center><p1>
+												Материал:<br>
+												{{ item.material }}<br>
+												Примерный вес:<br>
+												{{ item.weight }}<br>
+												Вставка:<br>
+												{{ item.insert_material }}<br>
+												Реальные характеристики изделия могут иметь незначительные отличия от представленных на сайте<br><br>
+											</p1></center>
+										</div>
+											<img src="{{ url_for('static', filename= item.path_photos + '/1.png') }}" alt="gallery" width="250" height="200" class="p-3 align-text-center">
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+												<a href="{{ url_for('rings', id=item.id)  }}">
+        											<button type="button" class="btn btn-primary">Открыть</button>
+												</a>
+										</div>
+									  </div>
+									</div>
+								  </div>
+									{% endfor %}
+								</center>
+			</div>
+ 			<div class="pagination">
+     			<div class="prev">Prev</div>
+				<div class="page">Страница <span class="page-num"></span></div>
+				<div class="next">Next</div>
+			</div>
+		</section>
+{% include "chat.html" %}
+{% include "footer.html" %}
+
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/Catalog.js') }}"></script>
+</body>
+</html>

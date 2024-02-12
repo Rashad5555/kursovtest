@@ -1,0 +1,48 @@
+<header id ='header'>
+<nav class="navbar navbar-expand-lg navbar-light" id="neubar" style="background-color: #ffffff;">
+      <div class="container">
+        <a href="{{ url_for('index')  }}">
+            <img src="{{ url_for('static', filename='/img/RF.png') }}" alt="" width="70" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav justify-content-between mx-lg-auto ">
+            <li class="nav-item"><a class="nav-link mx-2" href="{{ url_for('index')  }}">
+               <i class="fa fa-home" aria-hidden="true"></i> Домашняя страница</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="{{ url_for('About')  }}" >
+                <i class="fa fa-info-circle" aria-hidden="true"></i> О Нас</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link mx-2" href="{{ url_for('Catalog')  }}">
+                <i class="fa fa-list" aria-hidden="true"></i> Каталог</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="{{ url_for('korzina')  }}">
+                  <i class="fa fa-shopping-basket" aria-hidden="true"></i> Корзина</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 <i class="fa fa-user" aria-hidden="true"></i> Войти / Зарегистрироваться</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                       {% if role == 0 %}
+                               <li><a class="dropdown-item" href="{{ url_for('login')  }}">Войти</a></li>
+                        {% else %}
+                                <li><a class="dropdown-item" href="{{ url_for('logout')  }}">Выйти</a></li>
+
+                        {% endif %}
+                      <li><a class="dropdown-item" href="{{ url_for('registration')  }}">Зарегистироваться</a></li>
+                  </ul>
+            </li>
+            <li class="nav-item tema">
+                  <a class="nav-link mx-2" href="#">
+                  <button7 id="switchMode"><i class="fa fa-adjust" aria-hidden="true"></i> On/Off</button7></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>

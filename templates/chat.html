@@ -1,0 +1,29 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+					<img class="img-fluid smileImage" src="src/pngegg (7).png" alt="">
+				  <h5 class="modal-title" id="exampleModalLabel">Поддержка. Пишите, не стесняйтесь!</h5>
+                    <button type="button1" class="close" data-dismiss="modal">
+                          <span class="btn-close" data-bs-dismiss="modal" aria-hidden="false">&times;</span>
+                    </button>
+				</div>
+				<div class="modal-body chatBody d-flex flex-column">
+					<!-- <p class="theirMessage bg-warning align-self-end p-3 w-50 d-flex text-start">
+						Где располагается ваше заведение?
+					</p>
+					<p class="theirMessage bg-dark text-light align-self-start p-3 w-50">
+						Мы располагаемся по адресу ул. Советская, 2-1, Кострома, Костромская обл
+					</p> -->
+				</div>
+				<div class="modal-footer">
+					<p>Я умею отвечать только на эти вопросы:</p>
+				  <button type="button" onclick="answer1()" class="btn btn-warning rounded-pill">Где располагается наша компания?</button>
+				  <button type="button" onclick="answer2()" class="btn btn-warning rounded-pill">Какое кольцо самое дорогое?</button>
+				  <button type="button" onclick="answer3()" class="btn btn-warning rounded-pill">На каком автобусе можно до вас доехать?</button>
+				  <button type="button" onclick="answer4()" class="btn btn-warning rounded-pill">Быстро доставляете кольца?</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+<img onclick="" class="chatButton rounded-circle" src="{{ url_for('static', filename='/img/chat.png') }}" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="">

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.min.css') }}">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="{{ url_for('static', filename=theme) }}" rel="stylesheet" id="theme">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hello</title>
+</head>
+<body class="d-flex flex-column min-vh-100 ">
+{% include "navPanel.html" %}
+
+                <div class="wrapper flex-grow-1">
+                   {% block messages %} {% endblock %}
+                <div class='container'>
+                </div>
+                    <div class="container mt-5 mb-5" id ='main_cntr' >
+            <p>
+            {% if role == 1 %}
+                {% if sum == 0 %}
+                    <h3>В корзине пусто</h3>
+                {% else %}
+                    <form method="post" action="/purchase">
+                        <label>Общая сумма корзины: {{ sum }}</label>
+                        <button style="background-color: white" >Оплатить</button>
+                    </form>
+                    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                        {% for el in data.keys() %}
+                            <div class="col">
+                                <div class="card mb-4 rounded-3 shadow-sm">
+                                    <div class="card-header py-3">
+                                        <h4 class="my-0 fw-normal">Название: {{data.get(el)[0].name}}</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title pricing-card-title">Цена: {{ data.get(el)[0].price }}</h4>
+                                        <h4 class="card-title pricing-card-title">Размер: {{ el.Size }}</h4>
+                                        <form method="post">
+                                            <input name="idRing" value={{data.get(el)[1]}} hidden>
+                                            <button type="submit" class="w-100 btn btn-lg btn-outline-primary">Удалить из корзины</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% else %}
+                <h3>
+                    Для просмотра содержимого корзины авторизуйтесь!
+                </h3>
+            {% endif %}
+            </p>
+                   </div>
+                </div>
+                   <div class = "container-fluid mb-3">{% block addit %} {% endblock %}</div>
+                    </div>
+
+
+{% include "chat.html" %}
+{% include "footer.html" %}
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/korzina.js') }}"></script>
+</body>
+</html>

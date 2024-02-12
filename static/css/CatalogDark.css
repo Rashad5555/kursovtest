@@ -1,0 +1,136 @@
+button7{
+    padding: 8px;
+    background-color: white;
+    color: black;
+    border: 1px dashed black;
+    border-radius: 3px;
+    font-size: 1em;
+    margin-top: 1%;
+    outline: none;
+}
+center{
+    margin-top: 21px;
+}
+
+
+.gallery{
+	width: 100%;
+}
+
+.gallery .gallery-items .item{
+    float: left;
+	width:50%;
+	position: relative;
+
+}
+
+.gallery .gallery-items .item.hide{
+	display: none;
+}
+.gallery .gallery-items .item.show{
+	display: block;
+	animation: show .5s ease;
+}
+@keyframes show{
+    0%{
+    	opacity:0;
+    	transform: scale(0.9);
+    }
+    100%{
+    	opacity:1;
+    	transform: scale(1);
+    }
+}
+
+.gallery .gallery-items .item img{
+
+	display: block;
+}
+
+.gallery .pagination{
+	width: 100%;
+	align-items: center;
+	text-align: center;
+    justify-content: center;
+    margin-bottom: 31px;
+}
+.gallery .pagination div{
+	display: inline-block;
+	margin:0 10px;
+}
+.gallery .pagination .page{
+	color:white;
+}
+.gallery .pagination .prev,.gallery .pagination .next{
+ color:#000000;
+ border:1px solid #ffffff;
+ font-size:15px;
+ padding:7px 15px;
+ cursor: pointer;
+     color: white;
+
+}
+
+.gallery .pagination .prev.disabled,
+.gallery .pagination .next.disabled{
+	border-color: white;
+	color:gray;
+	pointer-events: none;
+}
+body{
+    background: rgb(29,29,29);
+    transition: 1s;
+}
+p{
+     color: white;
+}
+
+#neubar {
+      background: #fae8d2;
+      box-shadow: 4px 6px 12px rgba(0,0,0,0.4)
+    }
+
+    #neubar .nav-item {
+      margin : auto 4px;
+    }
+    #neubar a {
+
+      padding-left:12px;
+      padding-right:12px;
+    }
+    a.navbar-brand {
+      color: #454545
+    }
+@media (min-width: 250px) and (max-width: 3170px){
+.gallery .modals .btn
+{
+margin: 0 auto;
+}
+}
+.chatButton {
+	width: 70px;
+	height: 70px;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: white;
+	color: white;
+	cursor: pointer;
+	border-radius: 4px;
+}
+/* Important part */
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    height: 50vh;
+    overflow-y: auto;
+}
+
+.theirMessage{
+	border-radius: 2em;
+}
