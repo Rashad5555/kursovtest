@@ -15,7 +15,7 @@
 
 
 
-## License
+## Лицензия
 [MIT](https://opensource.org/license/mit/) Copyright (c) 2024 - forever Azer5555
 
 
