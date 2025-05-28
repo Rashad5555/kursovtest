@@ -17,7 +17,14 @@
 - Скачайте репозиторий
 - Установите в свой venv пакеты из файла requirements.txt
 
+## Фото сайта
+
+| ![Изображение 1](images_for_site/image44.png) | ![Изображение 2](images_for_site/image45.png) | 
+|:-----------------------------------:|:-----------------------------------:|
+| ![Изображение 3](images_for_site/image46.png) | ![Изображение 4](images_for_site/image47.png) | 
+| ![Изображение 5](images_for_site/image48.png) | ![Изображение 6](images_for_site/image49.png) |
+| ![Изображение 7](images_for_site/image50.png) | ![Изображение 8](images_for_site/image51.png) |
+
 ## Лицензия
 [MIT](https://opensource.org/license/mit/) Copyright (c) 2024 - forever Azer5555
-
 
